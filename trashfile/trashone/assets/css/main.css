@@ -1,0 +1,174 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full page styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000000; /* Darker background for luxury feel */
+    color: #ecf0f1; /* Light text color for contrast */
+    font-family: 'Roboto', sans-serif; /* Elegant font choice */
+    overflow: hidden;
+}
+
+/* Container styling */
+.container {
+    text-align: center;
+    animation: fadeIn 3s ease-in-out;
+    padding: 1em;
+}
+
+/* Header styling */
+#store-name {
+    font-size: 5em;
+    margin-bottom: 0.5em;
+    color: #e67e22; /* Luxurious orange tone */
+    text-shadow: 0 0 20px rgba(255, 165, 0, 0.7);
+    animation: colorChange 8s infinite, fadeIn 3s ease-in-out;
+}
+
+/* Domain styling */
+.domain {
+    font-size: 1em;
+    color: #bdc3c7; /* Subtle, elegant color */
+}
+
+/* Paragraph styling */
+#surprise-text {
+    font-size: 1.5em;
+    color: #ecf0f1;
+    margin: 0;
+    padding: 1em 0;
+    animation: scaleText 5s ease-in-out infinite, fadeIn 4s ease-in-out;
+}
+.image-container {
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 2;
+    overflow: hidden;
+}
+.logo {
+    width: 100%;
+    height: auto;
+    max-width: 30rem;
+    animation: scaleText 8s infinite, fadeIn 3s ease-in-out;
+    
+}
+/* Signup form styling */
+.signup-form {
+    margin-top: 2em;
+    padding: 1.5em;
+    border: 2px solid #ecf0f1; /* Light border for contrast */
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    background: #34495e; /* Darker background for form */
+}
+
+/* Form elements styling */
+.signup-form input {
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    width: 100%; /* Full width on smaller screens */
+    max-width: 300px; /* Limit width on larger screens */
+    margin-bottom: 1em;
+    font-size: 1em;
+    color: #2c3e50;
+}
+
+.signup-form button {
+    padding: 0.5em 2em;
+    border: none;
+    border-radius: 5px;
+    background: #e67e22; /* Luxurious orange tone */
+    color: #ecf0f1;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.signup-form button:hover {
+    background: #d35400; /* Darker orange for hover effect */
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: #e67e22;
+    }
+    50% {
+        color: #f39c12; /* Slightly different shade of orange */
+    }
+    100% {
+        color: #e67e22;
+    }
+}
+
+/* Keyframe animation for scaling text effect */
+@keyframes scaleText {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    #store-name {
+        font-size: 3.5em; /* Smaller font size on smaller screens */
+    }
+
+    #surprise-text {
+        font-size: 1.2em; /* Smaller font size on smaller screens */
+    }
+
+    .signup-form {
+        padding: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    #store-name {
+        font-size: 2.5em; /* Even smaller font size on very small screens */
+    }
+
+    #surprise-text {
+        font-size: 1em; /* Adjust font size for very small screens */
+    }
+
+    .signup-form {
+        padding: 0.5em;
+    }
+
+    .signup-form input, .signup-form button {
+        width: 100%; /* Full width for form elements */
+    }
+}
