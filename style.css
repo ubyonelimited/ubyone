@@ -1,0 +1,164 @@
+/* Body Styling */
+body {
+    background: linear-gradient(135deg, #1c1c1c, #121212); /* Darker gradient */
+    width: 100vw;
+    min-height: 100vh;
+    color: #f0f0f0; /* Soft light color for contrast */
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Wrapper Centering and Animation */
+.wrapper {
+    text-align: center;
+    animation: fadeIn 1s ease-out forwards;
+    max-width: 90%;
+    padding: 40px;
+    border-radius: 15px;
+    /* background: rgba(30, 30, 30, 0.9);  */
+}
+
+/* Logo Styling */
+.wrapper img {
+    width: 100%;
+    max-width: 40rem;
+    animation: logoFadeIn 1s 0.5s ease-out forwards;
+}
+
+/* Responsive Logo */
+@media (max-width: 600px) {
+    .wrapper img {
+        max-width: 20rem;
+    }
+}
+
+/* Heading Styling */
+.wrapper h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #21a500; /* Gold for a luxurious touch */
+    margin: 10px 0;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8); 
+    position: relative;
+    opacity: 0;
+    animation:  fadeIn 4s ease-in-out , scaleText 5s ease-in-out infinite;
+}
+
+.wrapper .dot {
+    color: #21a500;/* Soft pink for a friendly accent */
+    animation: pulse 1.5s infinite;
+}
+
+/* Paragraph Styling */
+.wrapper p {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9); /* Soft white for clarity */
+    max-width: 500px;
+    line-height: 1.5;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    animation: fadeInUp 1s 1s forwards;
+}
+
+/* Social Icon Styling */
+.wrapper .icons {
+    margin-top: 30px;
+    opacity: 0;
+    animation: fadeIn 1s 1.2s forwards;
+}
+
+.wrapper .icons a {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 15px;
+    transition: transform 0.3s ease;
+}
+
+.wrapper .icons i {
+    color: #FFD700; /* Gold for a luxurious touch */
+    background: rgba(255, 255, 255, 0.2); /* Light background for contrast */
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 1.5rem; /* Slightly larger icons */
+    transition: all 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); /* Darker shadow for depth */
+}
+
+.wrapper .icons a:hover i {
+    color: #fff; /* Change icon color on hover */
+    background: #FF4081; /* Friendly pink on hover */
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.3); /* Light shadow on hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+@keyframes logoFadeIn {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleText {
+    0% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(.6);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .wrapper h1 {
+        font-size: 2.5rem;
+    }
+
+    .wrapper p {
+        font-size: 1rem;
+    }
+
+    .wrapper .icons i {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper h1 {
+        font-size: 2rem;
+    }
+
+    .wrapper p {
+        font-size: 0.9rem;
+    }
+
+    .wrapper .icons i {
+        padding: 10px;
+    }
+}
